@@ -1,0 +1,193 @@
+object ThemeTesterForm: TThemeTesterForm
+  Left = 645
+  Height = 483
+  Top = 355
+  Width = 826
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  BorderWidth = 2
+  Caption = 'Theme Tester'
+  ClientHeight = 483
+  ClientWidth = 826
+  DragMode = dmAutomatic
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Position = poScreenCenter
+  LCLVersion = '8.8'
+  OnCreate = FormCreate
+  object cbEditorBG: TColorBox
+    Left = 161
+    Height = 24
+    Top = 122
+    Width = 100
+    ItemHeight = 16
+    TabOrder = 0
+  end
+  object cbGutterBG: TColorBox
+    Left = 161
+    Height = 24
+    Top = 184
+    Width = 100
+    ItemHeight = 16
+    TabOrder = 1
+  end
+  object cbSelectionBG: TColorBox
+    Left = 161
+    Height = 24
+    Top = 216
+    Width = 100
+    ItemHeight = 16
+    TabOrder = 2
+  end
+  object ColorBox5: TColorBox
+    Left = 160
+    Height = 24
+    Top = 248
+    Width = 100
+    ItemHeight = 16
+    TabOrder = 3
+  end
+  object RadioButton3: TRadioButton
+    Left = 344
+    Height = 19
+    Top = 176
+    Width = 90
+    Caption = 'RadioButton3'
+    TabOrder = 4
+  end
+  object RadioButton4: TRadioButton
+    Left = 344
+    Height = 19
+    Top = 214
+    Width = 90
+    Caption = 'RadioButton4'
+    TabOrder = 5
+  end
+  object plPanelPages1: TplPanelPages
+    Left = 528
+    Height = 160
+    Top = 80
+    Width = 200
+    BevelOuter = bvNone
+    Caption = 'plPanelPages1'
+    ClientHeight = 160
+    ClientWidth = 200
+    TabOrder = 6
+    ActivePageNum = 1
+    TabColorOptions.ColorBg = clWindow
+    TabColorOptions.ColorDrop = 6316256
+    TabColorOptions.ColorBorderActive = 10526880
+    TabColorOptions.ColorBorderPassive = 10514544
+    TabColorOptions.ColorTabActive = clGray
+    TabColorOptions.ColorTabPassive = 7891048
+    TabColorOptions.ColorTabOver = 10518656
+    TabColorOptions.ColorFontModified = 10485760
+    TabColorOptions.ColorCloseBg = clNone
+    TabColorOptions.ColorCloseBgOver = 6316256
+    TabColorOptions.ColorCloseBorderOver = 6316256
+    TabColorOptions.ColorCloseX = clGray
+    TabColorOptions.ColorArrow = 10066329
+    TabColorOptions.ColorArrowOver = 14737632
+    TabOptions.TabAngle = 0
+    TabOptions.TabHeight = 24
+    TabOptions.TabWidthMin = 18
+    TabOptions.TabWidthMax = 130
+    TabOptions.TabWidthHideX = 55
+    TabOptions.TabIndentDropI = 4
+    TabOptions.TabIndentInter = 0
+    TabOptions.TabIndentInit = 4
+    TabOptions.TabIndentLeft = 6
+    TabOptions.TabIndentText = 6
+    TabOptions.TabIndentTop = 1
+    TabOptions.TabIndentXRight = 10
+    TabOptions.TabIndentXInner = 3
+    TabOptions.TabIndentXSize = 14
+    TabOptions.TabIndentColor = 5
+    TabOptions.TabIndentArrowSize = 4
+    TabOptions.TabIndentArrowLeft = 4
+    TabOptions.TabIndentArrowRight = 20
+    TabOptions.TabShowClose = tbShowAll
+    TabOptions.TabShowPlus = True
+    TabOptions.TabShowPlusText = ' + '
+    TabOptions.TabShowModifiedText = '•'
+    TabOptions.TabShowMenu = True
+    TabOptions.TabShowBorderActiveLow = False
+    TabOptions.TabShowEntireColor = False
+    TabOptions.TabMiddleClickClose = True
+    TabOptions.TabDoubleClickPlus = True
+    TabOptions.TabDragEnabled = True
+    TabOptions.TabDragOutEnabled = True
+    TabOptions.TabDragCursor = crDrag
+    TabOptions.TabWidth = 75
+    TabBottom = False
+    object PanelPage1: TplPanelPage
+      Left = 0
+      Height = 134
+      Top = 26
+      Width = 200
+      PageID = 0
+      PageCaption = 'PanelPage1'
+      PageColor = clNone
+      Caption = 'PanelPage1'
+    end
+    object PanelPage2: TplPanelPage
+      Left = 0
+      Height = 134
+      Top = 26
+      Width = 200
+      PageID = 1
+      PageCaption = 'PanelPage2'
+      PageColor = clNone
+      Caption = 'PanelPage2'
+      object RadioButton1: TRadioButton
+        AnchorSideLeft.Control = RadioButton2
+        AnchorSideTop.Control = RadioButton2
+        AnchorSideTop.Side = asrBottom
+        Left = 1
+        Height = 19
+        Top = 20
+        Width = 90
+        Caption = 'RadioButton1'
+        TabOrder = 0
+      end
+      object RadioButton2: TRadioButton
+        AnchorSideLeft.Control = PanelPage2
+        AnchorSideTop.Control = PanelPage2
+        Left = 1
+        Height = 19
+        Top = 1
+        Width = 90
+        Caption = 'RadioButton2'
+        TabOrder = 1
+      end
+    end
+  end
+  object RadioButton5: TRadioButton
+    Left = 344
+    Height = 19
+    Top = 248
+    Width = 90
+    Caption = 'RadioButton5'
+    TabOrder = 7
+  end
+  object cbEditorText: TColorBox
+    Left = 160
+    Height = 22
+    Top = 152
+    Width = 100
+    ItemHeight = 16
+    TabOrder = 8
+  end
+  object lblThemeName: TLabeledEdit
+    Left = 168
+    Height = 23
+    Top = 72
+    Width = 80
+    EditLabel.Height = 15
+    EditLabel.Width = 80
+    EditLabel.Caption = 'lblThemeName'
+    TabOrder = 9
+    Text = 'lblThemeName'
+  end
+end

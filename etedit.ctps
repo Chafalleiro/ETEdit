@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Release"/>
+    <Units>
+      <Unit>
+        <Filename Value="etedit.ppr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ETEdit"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\core\uconfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uConfig"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="337"/>
+        <CursorPos Y="359"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\ui\umainform.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMainForm"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\core\uproject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uProject"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\ui\ueditortabs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uEditorTabs"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\tools\ufileutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uFileUtils"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\ui\frmprojecttree.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ProjectTreeForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmProjectTree"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\ui\frmprojectsettings.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ProjectSettingsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmProjectSettings"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\tools\uchunkprocessor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uChunkProcessor"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\ui\frmjsanalyzer.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="JSAnalyzerForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmJSAnalyzer"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\ui\ujsparser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uJSParser"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\tools\udebuglog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uDebugLog"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\tools\ujsdochtmlformatter.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uJSDocHTMLFormatter"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\ui\ueditorform.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uEditorForm"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\tools\uthememanager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uThemeManager"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\tools\frmthemetester.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ThemeTesterForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmThemeTester"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\tools\uPluginManager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\tools\uNonVisualPlugin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\tools\uVisualPlugin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\tools\upluginhostform.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PluginHostForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPluginHostForm"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\ui\frmsettings.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Settings"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmSettings"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

@@ -1,0 +1,111 @@
+program ETEdit;
+
+uses
+  heaptrc,
+  {$IFDEF UNIX}
+//  {$IFDEF UseCthreads}
+  cthreads,
+  {$ENDIF}
+//  {$ENDIF}
+  Interfaces,
+  Forms,
+  SysUtils,
+  FileUtil,
+  uCEFApplication,
+  uCEFConstants,
+(*  {$IFDEF WINDOWS}
+  uDarkStyleParams, // MetaDarkStyle units
+  uMetaDarkStyle,
+  uWin32WidgetSetDark,
+  {$ENDIF}*)
+  uMainForm in 'uMainForm.pas',
+  uThemeManager, uNonVisualPlugin, uVisualPlugin, uPluginHostForm, frmSettings;
+
+{$R etedit.res}
+
+begin
+  // Create and configure GlobalCEFApp ONCE at startup
+  try
+    GlobalCEFApp := TCefApplication.Create;
+
+    // Set minimal required paths
+    GlobalCEFApp.FrameworkDirPath := 'cef';
+    GlobalCEFApp.ResourcesDirPath := 'cef/resources';
+    GlobalCEFApp.LocalesDirPath := 'cef/locales';
+    GlobalCEFApp.Cache := 'cache';
+    GlobalCEFApp.LogFile := 'cef_debug.log';
+    GlobalCEFApp.LogSeverity := LOGSEVERITY_INFO;
+
+    // Minimal configuration
+    GlobalCEFApp.SingleProcess := False;
+    GlobalCEFApp.NoSandbox := True;
+    GlobalCEFApp.SetCurrentDir := True;
+    GlobalCEFApp.DisableWebSecurity := True;
+
+    // Important: Prevent multiple processes from being created
+    GlobalCEFApp.DisableFeatures := 'NetworkService,OutOfBlinkCors';
+
+    // Critical: Disable ALL Google services with these 2 switches
+    GlobalCEFApp.DisableFeatures :=
+      'NetworkService,OutOfBlinkCors,TranslateUI,BrowserPlugin';
+    GlobalCEFApp.DisableBackgroundNetworking := True;
+
+    // Block Google services
+    GlobalCEFApp.AddCustomCommandLine('--disable-gcm');
+    GlobalCEFApp.AddCustomCommandLine('--disable-component-update');
+    GlobalCEFApp.AddCustomCommandLine('--disable-background-networking');
+    GlobalCEFApp.AddCustomCommandLine('--disable-client-side-phishing-detection');
+    GlobalCEFApp.AddCustomCommandLine('--disable-default-apps');
+    GlobalCEFApp.AddCustomCommandLine('--disable-sync');
+    GlobalCEFApp.AddCustomCommandLine('--metrics-recording-only');
+    GlobalCEFApp.AddCustomCommandLine('--no-first-run');
+    GlobalCEFApp.AddCustomCommandLine('--no-default-browser-check');
+    GlobalCEFApp.AddCustomCommandLine('--password-store=basic');
+    GlobalCEFApp.AddCustomCommandLine('--use-mock-keychain');
+    GlobalCEFApp.AddCustomCommandLine('--disable-background-timer-throttling');
+    GlobalCEFApp.AddCustomCommandLine('--disable-renderer-backgrounding');
+    GlobalCEFApp.AddCustomCommandLine('--disable-backgrounding-occluded-windows');
+
+    GlobalCEFApp.AddCustomCommandLine('--disable-features=CloudPrint,CloudPrintProxy');
+    GlobalCEFApp.AddCustomCommandLine('--disable-cloud-import');
+
+    // Disable reporting
+    GlobalCEFApp.AddCustomCommandLine('--disable-breakpad');
+    GlobalCEFApp.AddCustomCommandLine('--disable-crash-reporter');
+    GlobalCEFApp.AddCustomCommandLine('--disable-features=Reporting');
+
+    // Command line switches
+    GlobalCEFApp.AddCustomCommandLine('--no-sandbox');
+    GlobalCEFApp.AddCustomCommandLine('--disable-setuid-sandbox');
+    GlobalCEFApp.AddCustomCommandLine('--disable-dev-shm-usage');
+
+    // Disable D-Bus completely
+    GlobalCEFApp.AddCustomCommandLine('--disable-features=Dbus');
+    GlobalCEFApp.AddCustomCommandLine('--disable-blink-features=AutomationControlled');
+
+    // Start the main process
+    if GlobalCEFApp.StartMainProcess then
+    begin
+      // Initialize application AFTER CEF
+  Application.Scaled:=True;
+  SetHeapTraceOutput('heapdump.txt');
+      Application.Initialize;
+      {$ifdef windows}
+      Application.MainFormOnTaskbar := True;
+      {$endif}
+      Application.CreateForm(TMainForm, MainForm);
+      Application.Run;
+    end;
+  finally
+    // Cleanup - CEF4Delphi handles its own shutdown
+    // Just free the GlobalCEFApp object
+    if Assigned(GlobalCEFApp) then
+    begin
+      DestroyGlobalCEFApp;
+      // Small delay to allow cleanup
+      Sleep(200);
+      GlobalCEFApp.Free;
+      GlobalCEFApp := nil;
+    end;
+  end;
+end.
